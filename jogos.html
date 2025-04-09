@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogos</title>
+  <link rel="icon" href="favicon/controle.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 Jogos 🎮</h1>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="jogos.html" class="nav-link">Jogos</a>
+      <a href="cadastro.html" class="nav-link">Cadastro</a>
+    </nav>
+  </header>
+
+  <!-- Modal centralizado (usado no desktop) -->
+<div id="modal-detalhes" class="detalhes-modal">
+    <button class="fechar-modal">&times;</button>
+    <div class="conteudo-modal"></div>
+</div>
+
+  <main>
+    <h1 class="titulo-principal">Jogos Populares</h1>
+    <p class="descricao">Explore nossa seleção de jogos incríveis, com detalhes e trailers.</p>
+    <p class="descricao">Clique em um jogo para ver mais detalhes e assistir ao trailer.</p>
+    <p class="descricao">Aproveite!</p>
+    <section class="container-jogos">
+      <!-- JOGO 1 - God of War -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-god-of-war.jpg" alt="God of War">
+            <h3>God of War</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Ação, Aventura</p>
+            <p>Kratos enfrenta os deuses nórdicos em uma jornada com seu filho Atreus.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PS4, PS5, PC</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: i5-2500k</li>
+                <li>Memória: 8 GB</li>
+                <li>GPU: GTX 960</li>
+                <li>Armazenamento: 70 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Kratos busca redenção enfrentando monstros e deuses ao lado de seu filho. Um jogo intenso e emocional.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/K0u_kAWLJOA" title="Trailer God of War" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        
+        <!-- JOGO 2 - GTA V -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-gta-v.jpg" alt="GTA V">
+            <h3>GTA V</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Ação, Mundo Aberto</p>
+            <p>Três criminosos vivem grandes golpes em Los Santos, cidade cheia de perigos.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PS4, PS5, Xbox, PC</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: i5-3470</li>
+                <li>Memória: 8 GB</li>
+                <li>GPU: GTX 660</li>
+                <li>Armazenamento: 72 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Explore um mundo aberto gigantesco com liberdade total para viver histórias ou causar o caos.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/QkkoHAzjnUs" title="Trailer GTA V" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-fifa-24.jpg" alt="FIFA 24">
+            <h3>FIFA 24</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Esporte, Competitivo</p>
+            <p>O maior simulador de futebol com gráficos e física realistas.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PS5, Xbox Series, PC</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: i5-6600k</li>
+                <li>Memória: 8 GB</li>
+                <li>GPU: GTX 1050 Ti</li>
+                <li>Armazenamento: 50 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Viva a emoção dos gramados com times e jogadores atualizados, jogabilidade refinada e novos modos online.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/raB1F3ZTg3E" title="Trailer FIFA 24" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-fortnite.jpg" alt="Fortnite">
+            <h3>Fortnite</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Battle Royale, Ação</p>
+            <p>Construa, lute e sobreviva em um campo de batalha cheio de ação.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PS4, PS5, Xbox, PC, Switch</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: Core i3-3225</li>
+                <li>Memória: 4 GB</li>
+                <li>GPU: Intel HD 4000</li>
+                <li>Armazenamento: 30 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Enfrente 100 jogadores em combates rápidos com construção e estratégias criativas.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/2gUtfBmw86Y" title="Trailer Fortnite" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-the-last-of-us-parte-2.jpg" alt="The Last of Us Part II">
+            <h3>The Last of Us Part II</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Ação, Drama</p>
+            <p>Uma jornada intensa e emocional num mundo pós-apocalíptico.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PS4, PS5</p>
+            <p><strong>Configurações mínimas:</strong> Exclusivo para console</p>
+            <p><strong>Resumo:</strong> Ellie parte em busca de justiça e redenção enfrentando perdas profundas e dilemas humanos.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/vhII1qlcZ4E" title="Trailer TLOU2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        
+        <!-- JOGO 6 - Minecraft -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-minecraft.jpg" alt="Minecraft">
+            <h3>Minecraft</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Criativo, Sobrevivência</p>
+            <p>Explore mundos infinitos, construa e sobreviva com blocos e criatividade.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PC, PS4, Xbox, Switch</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: Intel Core i3</li>
+                <li>Memória: 4 GB</li>
+                <li>GPU: Intel HD Graphics 4000</li>
+                <li>Armazenamento: 2 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Uma aventura infinita em blocos. Crie, explore, colete e lute como quiser.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/MmB9b5njVbA" title="Trailer Minecraft" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        
+        <!-- JOGO 7 - Call of Duty: Warzone -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-cod-warzone.jpg" alt="Call of Duty Warzone">
+            <h3>Warzone</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Battle Royale, FPS</p>
+            <p>Combates intensos e realistas em equipes ou solo, com estratégia e adrenalina.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PC, PS5, Xbox</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: i3-4340</li>
+                <li>Memória: 8 GB</li>
+                <li>GPU: GTX 670</li>
+                <li>Armazenamento: 100 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Uma guerra moderna em ritmo acelerado com armas, veículos e cooperação tática.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/0E44DClsX5Q" title="Trailer Warzone" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        
+        <!-- JOGO 8 - Red Dead Redemption 2 -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-rdr-s.jpg" alt="Red Dead Redemption 2">
+            <h3>Red Dead Redemption 2</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> Aventura, Faroeste</p>
+            <p>Um épico do velho oeste com narrativa profunda e mundo aberto riquíssimo.</p>
+            </div><div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PC, PS4, Xbox</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: i5-2500K</li>
+                <li>Memória: 8 GB</li>
+                <li>GPU: GTX 770</li>
+                <li>Armazenamento: 150 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Viva como Arthur Morgan na era dos foras da lei, lidando com honra, crime e escolhas difíceis.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/eaW0tYpxyp0" title="Trailer RDR2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        
+        <!-- JOGO 9 - Elden Ring -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-elden-ring.jpg" alt="Elden Ring">
+            <h3>Elden Ring</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> RPG, Ação</p>
+            <p>Explore um mundo sombrio, desafiante e misterioso criado por Hidetaka Miyazaki e George R. R. Martin.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PC, PS5, Xbox</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: i5-8400</li>
+                <li>Memória: 12 GB</li>
+                <li>GPU: GTX 1060</li>
+                <li>Armazenamento: 60 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Enfrente chefes desafiadores e construa seu caminho em um vasto e belo universo de fantasia.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/E3Huy2cdih0" title="Trailer Elden Ring" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+        
+        <!-- JOGO 10 - Valorant -->
+        <article class="card-jogo" onclick="toggleDetalhes(this)">
+            <div class="capa">
+            <img src="assets/img/capa-valorant.jpg" alt="Valorant">
+            <h3>Valorant</h3>
+            </div>
+            <div class="sinopse">
+            <p><strong>Gêneros:</strong> FPS, Competitivo</p>
+            <p>FPS tático 5x5 com agentes únicos e habilidades especiais.</p>
+            </div>
+            <div class="avaliacao">
+                <button class="gostei-btn">👍 Gostei <span class="gostei-contador">0</span></button>
+                <button class="nao-gostei-btn">👎 Não Gostei <span class="nao-gostei-contador">0</span></button>
+            </div>
+            <div class="detalhes oculto">
+            <p><strong>Plataformas:</strong> PC</p>
+            <p><strong>Configurações mínimas:</strong></p>
+            <ul>
+                <li>Processador: Core i3-370M</li>
+                <li>Memória: 4 GB</li>
+                <li>GPU: Intel HD 3000</li>
+                <li>Armazenamento: 10 GB</li>
+            </ul>
+            <p><strong>Resumo:</strong> Mistura de tática e habilidade em partidas explosivas com precisão e estratégia.</p>
+            <div class="video">
+                <iframe src="https://www.youtube.com/embed/e_E9W2vsRbQ" title="Trailer Valorant" frameborder="0" allowfullscreen></iframe>
+            </div>
+            </div>
+        </article>
+  
+        
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca de Jogos</p>
+  </footer>
+
+  <script src="js/jogos.js"></script>
+</body>
+</html>

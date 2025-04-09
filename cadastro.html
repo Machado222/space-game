@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro</title>
+  <link rel="icon" href="favicon/controle.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎮 Cadastro de Usuário 🎮</h1>
+    <nav>
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="jogos.html" class="nav-link">Jogos</a>
+      <a href="cadastro.html" class="nav-link">Cadastro</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-container" id="formularioContainer">
+      <form id="formCadastro">
+        <h2>Cadastro de Jogadores</h2>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmaSenha">Confirme sua senha:</label>
+        <input type="password" id="confirmaSenha" name="confirmaSenha" required>
+
+        <button type="submit">Cadastrar</button>
+        <p id="erroSenha" style="color: red; display: none;">As senhas não coincidem.</p>
+      </form>
+    </section>
+
+    <div class="mensagem-final" id="mensagemFinal" style="display: none;">
+      ✅ Cadastro realizado com sucesso!
+      <br />
+      <button id="voltarBtn">Ir para os jogos</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca de Jogos. Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('formCadastro');
+      const mensagemFinal = document.getElementById('mensagemFinal');
+      const formularioContainer = document.getElementById('formularioContainer');
+      const voltarBtn = document.getElementById('voltarBtn');
+      const erro = document.getElementById("erroSenha");
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const senha = document.getElementById("senha").value;
+        const confirmaSenha = document.getElementById("confirmaSenha").value;
+
+        if (senha !== confirmaSenha) {
+          erro.style.display = "block";
+          return;
+        }
+
+        erro.style.display = "none";
+        formularioContainer.classList.add('hidden'); 
+        mensagemFinal.style.display = 'block';
+
+        localStorage.setItem('usuarioCadastrado', 'true');
+      });
+
+      voltarBtn.addEventListener('click', function () {
+        window.location.href = 'jogos.html';
+      });
+    });
+  </script>
+</body>
+</html>
